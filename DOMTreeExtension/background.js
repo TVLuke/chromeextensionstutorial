@@ -4,6 +4,18 @@ chrome.alarms.onAlarm.addListener(onAlarm);
 chrome.browserAction.onClicked.addListener(function(tab) {
 onBrowsClick(tab);
 });
+chrome.runtime.onMessage.addListener(
+	function(request, sender, sendResponse) 
+	{
+    		console.log(sender.tab ? "from a content script:" + sender.tab.url :	"from the extension");
+    		if (request.greeting == "hello")
+		{
+			console.log(request.content);
+      		sendResponse({farewell: "goodbye"});
+		}
+  });
+
+
 
 function onBrowsClick(tab) 
 {

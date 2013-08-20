@@ -1,6 +1,6 @@
 {
  "name": "Third Extension",
- "description": "Some Fun With Scripts",
+ "description": "An injected script plays with the dom of a website",
  "manifest_version": 2,
  "version": "1",
  "permissions": ["tabs", "http://*/*", "https://*/*", "background", "alarms"],
