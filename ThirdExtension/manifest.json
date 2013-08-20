@@ -1,0 +1,13 @@
+{
+ "name": "Third Extension",
+ "description": "Some Fun With Scripts",
+ "manifest_version": 2,
+ "version": "1",
+ "permissions": ["tabs", "http://*/*", "background", "alarms"],
+ "background": {"scripts": ["background.js"]},
+ "content_scripts": [{"matches": ["http://*/*"],"js": ["inject.js"]}],
+ "browser_action": 
+	{
+		"default_icon": "16x16.png"
+	}
+}
